@@ -7,11 +7,11 @@ import './app.css'
   
 // }
 
-const Card = () => {
+const Card = ( {title }) => {
   return(
     <div>
       <h2>
-        Card Component
+         {title }
       </h2>
     </div>
   )
@@ -22,9 +22,9 @@ const App = () => {
     <div>
       <h2>Func Arrow Compoen</h2>
 
-      <Card /> 
-      <Card /> 
-      <Card /> 
+      <Card title="Samin boka"/>  
+      <Card title="Samin valona" /> 
+      <Card title="Samin ki pare na" /> 
     </div> 
   )
 }
