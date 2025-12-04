@@ -17,6 +17,19 @@ HEllow
 ![alt text](public\readme\image.png)
 
 
+[Flowbite](https://flowbite.com/docs/components/spinner/#content)
+
+[For backend](https://appwrite.io/)
+
+npm install react-use 
+
+npm install appwrite
+fetch trending movies update search count  handle databases or API calls
+
+
+
+
+
 
 
 
