@@ -1,0 +1,73 @@
+Your page is **blank** because your component is **crashing before it renders anything.**
+The crash happens here:
+
+```jsx
+const [searchTerm, setSearchTerm] = useState('');
+```
+
+👉 **You forgot to import `useState` from React.**
+
+When React hits `useState` without importing it, it throws an error and the entire App fails to load → resulting in a **blank screen**.
+
+---
+
+# ✅ **Fix your App.jsx**
+
+```jsx
+import React, { useState } from "react";  // ← IMPORT useState
+import Search from './components/Search';
+
+export const App = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  return (
+    <main>
+      <div className="pattern" />
+      <div className="wrapper">
+        <header>
+          <img src="./hero.png" alt="Hero Banner" />
+          <h1>
+            Find <span className="text-gradient">Movies</span> You'll Enjoy Without the Hassle
+          </h1>
+          <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        </header>
+      </div>
+    </main>
+  );
+};
+
+export default App;
+```
+
+---
+
+# 🔍 **Other things to check (common blank-screen causes)**
+
+### 1. **Check your image paths**
+
+If `hero.png` or `search.svg` is inside `/public`, the path should be:
+
+```jsx
+<img src="/hero.png" />
+<img src="/search.svg" />
+```
+
+### 2. **Open browser console (F12 → Console)**
+
+If there is an error like:
+
+```
+useState is not defined
+```
+
+or
+
+```
+Cannot find module './components/Search'
+```
+
+the page will render blank.
+
+---
+
+# 👉 If you want, paste the error from the browser console and I’ll tell you exactly what's wrong.
