@@ -2,12 +2,13 @@ import { useState } from 'preact/hooks'
 import preactLogo from './assets/preact.svg'
 import viteLogo from '/vite.svg'
 import './app.css'
-
+import{useState} from 'react'
 // function App() {
   
 // }
 
 const Card = ( {title }) => {
+   const [hasliked, setHasLiked] = useState(false);
   return(
     
     <div className='card' style={{
@@ -21,11 +22,18 @@ const Card = ( {title }) => {
       <h2>
          {title }
       </h2>
+      <button onClick={() => setHasLiked(true)}>
+        {
+          hasliked ? 'liked' : 'none' 
+        } 
+      </button>
     </div>
   )
 }
 
 const App = () => {
+  const [hasliked, setHasLiked] = useState(false);
+  //varibalename  set varibale
   return (
     <div className="card-container">
 

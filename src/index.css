@@ -29,3 +29,13 @@ h2{
 .card{
   border: 2px solid #d01a1a;
 }
+
+button{
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: transparent; 
+  width: 100%;
+  text-align: right;
+  
+}
