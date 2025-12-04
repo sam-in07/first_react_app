@@ -2,13 +2,17 @@ import { useState } from 'preact/hooks'
 import preactLogo from './assets/preact.svg'
 import viteLogo from '/vite.svg'
 import './app.css'
-import{useState} from 'react'
+import{useEffect, useState} from 'react'
 // function App() {
   
 // }
 
 const Card = ( {title }) => {
    const [hasliked, setHasLiked] = useState(false);
+
+   useEffect(() => {
+    console.log('like state changed ', hasliked);
+   });
   return(
     
     <div className='card' style={{
@@ -22,7 +26,8 @@ const Card = ( {title }) => {
       <h2>
          {title }
       </h2>
-      <button onClick={() => setHasLiked(true)}>
+      <button onClick={() => setHasLiked(!hasliked)}>
+        //chnages if liked or not 
         {
           hasliked ? 'liked' : 'none' 
         } 
